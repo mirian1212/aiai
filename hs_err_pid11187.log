@@ -1,0 +1,113 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f2c1ab51f4d, pid=11187, tid=0x00007f2b10b0e700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_151-b12) (build 1.8.0_151-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.151-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libc.so.6+0x39f4d]
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f2b80722800):  JavaThread "AWT-XAWT" daemon [_thread_in_native, id=13005, stack(0x00007f2b10a0e000,0x00007f2b10b0f000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 128 (SI_KERNEL), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007f2c14000077, RBX=0x0000000000000001, RCX=0x001064ae96cd3270, RDX=0x000fe58280000f00
+RSP=0x00007f2b10b0d640, RBP=0x00007f2c1aedc5f8, RSI=0x0000000000000001, RDI=0x00007f2b23e0dc60
+R8 =0x00007f2b8c02e920, R9 =0x0000000000000001, R10=0x0000000000000130, R11=0x0000000000000005
+R12=0x0000000000000001, R13=0x00007f2c16cd2380, R14=0x00007f2b10b0d6f0, R15=0x00007f2b80722800
+RIP=0x00007f2c1ab51f4d, EFLAGS=0x0000000000010206, CSGSFS=0x002b000000000033, ERR=0x0000000000000000
+  TRAPNO=0x000000000000000d
+
+Top of Stack: (sp=0x00007f2b10b0d640)
+0x00007f2b10b0d640:   0000000000000001 00007f2b8017cab0
+0x00007f2b10b0d650:   0000000000000000 0000000000000001
+0x00007f2b10b0d660:   00007f2b10b0d718 00007f2c1ab52045
+0x00007f2b10b0d670:   0000000000000073 00007f2ba67e5cf8
+0x00007f2b10b0d680:   00007f2b8017cab0 00007f2ba67e357d
+0x00007f2b10b0d690:   00007f2b8017cab0 00007f2ba67d4ee9
+0x00007f2b10b0d6a0:   00007f2b0bc20580 00007f2b10b0d700
+0x00007f2b10b0d6b0:   0000000000000000 00007f2c08b494be
+0x00007f2b10b0d6c0:   00007f2b10b0d710 00007f2c1a1ab5ab
+0x00007f2b10b0d6d0:   00007f2b10b0d770 00007f2c09c608d6
+0x00007f2b10b0d6e0:   ffffffffffffffff 00007f2b0bc07e78
+0x00007f2b10b0d6f0:   00000000c9b9d720 00007f2b10b0d720
+0x00007f2b10b0d700:   00007f2b10b0d770 00007f2c05007d00
+0x00007f2b10b0d710:   00007f2c05007d00 0000000000000001
+0x00007f2b10b0d720:   00007f2b8017cab0 00007f2c05007dd0
+0x00007f2b10b0d730:   00007f2b10b0d730 00007f2b0bc091ef
+0x00007f2b10b0d740:   00007f2b10b0d7b8 00007f2b0bc12388
+0x00007f2b10b0d750:   0000000000000000 00007f2b0bc09418
+0x00007f2b10b0d760:   00007f2b10b0d718 00007f2b10b0d7b0
+0x00007f2b10b0d770:   00007f2b10b0d800 00007f2c050082bd
+0x00007f2b10b0d780:   0000000000000000 0000000000000000
+0x00007f2b10b0d790:   0000000000000000 0000000000000000
+0x00007f2b10b0d7a0:   0000000000000000 00000000c9d121f0
+0x00007f2b10b0d7b0:   0000000000000000 00000000c9d12198
+0x00007f2b10b0d7c0:   00007f2b10b0d7c0 00007f2b0bc0911d
+0x00007f2b10b0d7d0:   00007f2b10b0d810 00007f2b0bc12388
+0x00007f2b10b0d7e0:   0000000000000000 00007f2b0bc09128
+0x00007f2b10b0d7f0:   00007f2b10b0d7b0 00007f2b10b0d810
+0x00007f2b10b0d800:   00007f2b10b0d858 00007f2c05008302
+0x00007f2b10b0d810:   00000000c9d12198 00007f2b10b0d818
+0x00007f2b10b0d820:   00007f2be4e2799b 00007f2b10b0d868
+0x00007f2b10b0d830:   00007f2be4eaf138 0000000000000000 
+
+Instructions: (pc=0x00007f2c1ab51f4d)
+0x00007f2c1ab51f2d:   ed 74 50 49 8b 45 08 48 89 c2 48 c1 e2 05 48 85
+0x00007f2c1ab51f3d:   c0 49 8d 4c 15 f0 74 2a 48 83 e8 01 49 89 45 08
+0x00007f2c1ab51f4d:   48 8b 11 48 83 fa 03 0f 84 a6 00 00 00 48 83 fa
+0x00007f2c1ab51f5d:   04 74 78 48 83 fa 02 74 4a 48 83 e9 20 48 85 c0 
+
+Register to memory mapping:
+
+RAX=0x00007f2c14000077 is an unknown value
+RBX=0x0000000000000001 is an unknown value
+RCX=0x001064ae96cd3270 is an unknown value
+RDX=0x000fe58280000f00 is an unknown value
+RSP=0x00007f2b10b0d640 is pointing into the stack for thread: 0x00007f2b80722800
+RBP=0x00007f2c1aedc5f8: <offset 0x3c45f8> in /lib/x86_64-linux-gnu/libc.so.6 at 0x00007f2c1ab18000
+RSI=0x0000000000000001 is an unknown value
+RDI=0x00007f2b23e0dc60: <offset 0x1209c60> in /usr/lib/adobe-flashplugin/libflashplayer.so at 0x00007f2b22c04000
+R8 =0x00007f2b8c02e920 is an unknown value
+R9 =0x0000000000000001 is an unknown value
+R10=0x0000000000000130 is an unknown value
+R11=0x0000000000000005 is an unknown value
+R12=0x0000000000000001 is an unknown value
+R13=0x00007f2c16cd2380 is an unknown value
+R14=0x00007f2b10b0d6f0 is pointing into the stack for thread: 0x00007f2b80722800
+R15=0x00007f2b80722800 is a thread
+
+
+Stack: [0x00007f2b10a0e000,0x00007f2b10b0f000],  sp=0x00007f2b10b0d640,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libc.so.6+0x39f4d]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 30754  sun.awt.X11.XlibWrapper.XEventsQueued(JI)I (0 bytes) @ 0x00007f2c08b49444 [0x00007f2c08b49400+0x44]
+j  sun.awt.X11.XToolkit.run(Z)V+63
+j  sun.awt.X11.XToolkit.run()V+5
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f2b70176000 JavaThread "Worker-48" [_thread_blocked, id=13872, stack(0x00007f2b1cca7000,0x00007f2b1cda8000)]
+  0x00007f2b0f20b000 JavaThread "AWT-EventQueue-0" [_thread_blocked, id=13060, stack(0x00007f2b1070d000,0x00007f2b1080e000)]
+  0x00007f2b0f285000 JavaThread "AWT-Shutdown" [_thread_blocked, id=13059, stack(0x00007f2b10e12000,0x00007f2b10f13000)]
+  0x00007f2b0d986800 JavaThread "Timer-0" daemon [_thread_blocked, id=13058, stack(0x00007f2b1aca1000,0x00007f2b1ada2000)]
+=>0x00007f2b80722800 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=13005, stack(0x00007f2b10a0e000,0x00007f2b10b0f000)]
+  0x00007f2b804ad800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=13004, stack(0x00007f2b10c10000,0x00007f2b10d11000)]
+  0x00007f2bf4019800 JavaThread "Worker-46" [_thread_blocked
